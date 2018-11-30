@@ -26,5 +26,11 @@ const mapStateToProps = (state) => {
     items: state.items
   };
 };
-
+const mapDispatchToProps = dispatch => {
+  return {
+    addItem: () => {
+      dispatch(addItem())
+    }
+  };
+};
 export default connect(mapStateToProps)(App);
